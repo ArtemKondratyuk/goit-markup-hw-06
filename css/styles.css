@@ -331,7 +331,8 @@ img {
 }
 
 .form-fild input {
-  height: 40px;  
+  height: 40px; 
+  padding-left: 38px; 
 }
 
 .form-fild-comment {
@@ -399,12 +400,12 @@ textarea::placeholder {
   margin-top: 24px;
   border: 1px solid transparent;
   transition: background-color 250ms var(--cubic-bezier),
-    fill 250ms var(--cubic-bezier);
+  fill 250ms var(--cubic-bezier);
 }
 
 .send:hover,
 .send:focus {
-  background: var(--buttom-hover-color);
+background: var(--buttom-hover-color);
 }
 
 .svg-form {
@@ -414,7 +415,14 @@ position: absolute;
  margin-bottom: 14px;
  width: 12px; 
  height:12px;
+ fill: black;
 }
+
+
+.svg-form-use:focus {
+  fill: var(--primary-brand);
+} 
+
 
 
 
