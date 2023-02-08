@@ -330,35 +330,63 @@ img {
   letter-spacing: 0.01em;  
 }
 
-.form-fild input {
+.form-input {
   height: 40px; 
   padding-left: 38px; 
+  outline: none;
+ border-radius: 4px;
+ border: 1px solid var(--form-input);
+ transition: background-color 250ms var(--cubic-bezier),
+ fill 250ms var(--cubic-bezier);
+
+}
+
+.form-input:hover , 
+.form-input:focus {
+   border-radius: 4px;
+   border: 1px solid var(--primary-brand) ;
+}
+
+
+.form-input:hover + .svg-form,
+.form-input:focus + .svg-form {
+  fill: var(--primary-brand);
 }
 
 .form-fild-comment {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
-  width: 360px;
+  width: 360px;  
 }
 
-.form-fild-comment label {
+.form-comment {
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1;
   color: var(--svg-background);
-  letter-spacing: 0.01em;
-  padding-bottom: 4px;
+  letter-spacing: 0.01em;  
 }
 
-textarea {
+.form-textarea {
   resize: none;
+  outline: none;
   padding-left: 16px;
   padding-top: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--form-input); 
+ 
 }
 
-textarea::placeholder {
+.form-textarea:hover,
+.form-textarea:focus  {
+  border-radius: 4px;
+  border: 1px solid var(--primary-brand) ;
+}
+
+.form-textarea::placeholder {
   font-weight: 400;
   font-family: inherit;
   font-size: 12px;
@@ -367,19 +395,32 @@ textarea::placeholder {
   letter-spacing: 0.04em;
 }
 
+.checkbox-label {
+  display: flex;   
+  }
+
+
 .checkbox-text {
+  font-family: inherit;  
   font-weight: 400;
-  font-family: inherit;
   font-size: 12px;
-  line-height: 1.3;
-  color: var(--text-color);
+  line-height: 1.3em;
   letter-spacing: 0.04em;
-  text-align: center;
-  padding-bottom: 24px;
+  color: var(--submit);  
+   margin-bottom: 24px;
 }
 
+
+
 .checkbox-link {
+  font-weight: 400;
+  font-family: inherit;
   text-decoration: underline;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--submit);
+  letter-spacing: 0.04em; 
+  padding-left: 4px; 
 }
 
 .send {
@@ -415,17 +456,8 @@ position: absolute;
  margin-bottom: 14px;
  width: 12px; 
  height:12px;
- fill: black;
+ 
 }
-
-
-.svg-form-use:focus {
-  fill: var(--primary-brand);
-} 
-
-
-
-
 
 /* section text strategy */
 
